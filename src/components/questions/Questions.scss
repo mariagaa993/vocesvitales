@@ -1,0 +1,38 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.container-header-questions {
+    padding: 15px;
+    .row-header-questions {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        .title-header-questions {
+            font-weight: 600;
+            font-size: 25px;
+        }
+        .button-header-questions {
+            background-color: $fucsia;
+            border: none;
+            outline: none !important;
+            width: 100%;
+            &:hover {
+                background-color: lighten($fucsia, 8);
+            }
+            &:active {
+                background-color: $fucsia !important;
+            }
+            &:focus {
+                background-color: $fucsia;
+                box-shadow: none !important;
+            }
+            @include breakpoint-tablet {
+                width: 30%;
+            }
+            @include breakpoint-tablet-desktop {
+                width: 25%;
+            }
+        }
+    }
+}

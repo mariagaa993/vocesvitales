@@ -1,0 +1,49 @@
+@import "./variables.scss";
+
+@mixin primary-button {
+    background-color: $fucsia;
+    color: white;
+    border: 1px solid $fucsia;
+    border-radius: 0.5rem;
+    &:hover {
+        box-shadow: 0px 0px 5px 0px rgba(66,73,82,1);
+    }
+    &:active {
+        box-shadow: inset 0px 0px 5px 0px rgba(66,73,82,1);
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+//Screen Sizes 
+@mixin breakpoint-mobile-2 {
+    @media (min-width: 414px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-tablet-desktop {
+    @media (min-width: 955px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-desktop-1 {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-desktop-2 {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+

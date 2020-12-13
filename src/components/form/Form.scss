@@ -1,0 +1,32 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.form {
+    padding: 10px;
+    .input-form, .textarea-form {
+        @include breakpoint-tablet-desktop {
+            width: 50%;
+        }
+    }
+    .button-form {
+        background-color: $fucsia;
+        border: none;
+        width: 100%;
+        &:hover {
+            background-color: lighten($fucsia, 8);
+        }
+        &:active {
+            background-color: $fucsia !important;
+        }
+        &:focus {
+            background-color: $fucsia;
+            box-shadow: none !important;
+        }
+        @include breakpoint-tablet {
+            width: 30%;
+        }
+        @include breakpoint-tablet-desktop {
+            width: 20%;
+        }
+    }
+}
